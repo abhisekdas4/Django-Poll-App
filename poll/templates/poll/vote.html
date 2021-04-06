@@ -1,0 +1,25 @@
+<h1>Choose to Vote</h1>
+
+<form action="" method="post">
+  {% csrf_token %}
+  <div>
+    {{poll.question}}
+
+  </div>
+  <br>
+  <div>
+    <form method="post">
+      {% csrf_token %}
+      <label><input type="radio" name="poll" value="option1">{{poll.option_one}}</label><br><br>
+      <label><input type="radio" name="poll" value="option2">{{poll.option_two}}</label><br><br>
+      <label><input type="radio" name="poll" value="option3">{{poll.option_three}}</label><br><br>
+      <input type="submit" name="" value="Submit">
+    </form>
+  </div>
+  <br><br>
+  <div>
+    <a href="{% url 'home' %}">Back to Home</a>
+
+  </div>
+
+</form>

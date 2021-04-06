@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>POLL APP</title>
+  </head>
+  <body>
+    <h1>Welcome to Poll App</h1>
+    <div>
+      <a href="{% url 'create' %}">Create a New Poll</a>
+
+    </div>
+    
+    <h3>Below Are Some On-Going Polls</h3>
+    {% for poll in qs %}
+    <div>
+      {{poll.id}}
+      {{poll.question}}
+    </div>
+    <br>
+    <div>
+      <a href="{% url 'vote' poll.id %}">Vote</a>
+      <a href="{% url 'result' poll.id %}">Result</a>
+    </div>
+    <br>
+    <br>
+
+    {% endfor %}
+
+
+  </body>
+</html>

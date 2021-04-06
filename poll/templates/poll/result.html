@@ -1,0 +1,33 @@
+<h1>Poll Result</h1>
+
+
+
+<div>
+  {{poll.question}}
+</div>
+<br>
+
+<br>
+<div>
+  {{poll.option_one}}
+  {{poll.option_one_count}}
+</div>
+<br>
+<div>
+  {{poll.option_two}}
+  {{poll.option_two_count}}
+</div>
+<br>
+<div>
+  {{poll.option_three}}
+  {{poll.option_three_count}}
+</div>
+<br>
+<div>
+total votes:  <strong>{{poll.total}}</strong>
+</div>
+<br><br>
+<div>
+  <a href="{% url 'home' %}">Back to Home</a>
+
+</div>
